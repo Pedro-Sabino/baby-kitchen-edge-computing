@@ -1,0 +1,54 @@
+[
+  {
+    "id": "serial-in",
+    "type": "serial in",
+    "z": "flow1",
+    "name": "Arduino",
+    "serial": "serial-port",
+    "x": 100,
+    "y": 100,
+    "wires": [["debug", "function1"]]
+  },
+  {
+    "id": "debug",
+    "type": "debug",
+    "z": "flow1",
+    "name": "Ver Dados",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "x": 300,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "function1",
+    "type": "function",
+    "z": "flow1",
+    "name": "Registrar Pedido",
+    "func": "if (msg.payload.trim() === 'P') {
+    msg.payload = 'Pedido de mamadeira recebido';
+    return msg;
+}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 300,
+    "y": 150,
+    "wires": [["ui_text"]]
+  },
+  {
+    "id": "ui_text",
+    "type": "ui_text",
+    "z": "flow1",
+    "group": "ui_group",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "name": "Status",
+    "label": "Status:",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread"
+  }
+]
