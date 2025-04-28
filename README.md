@@ -22,7 +22,7 @@ Reduzir o desperdício de mamadeiras em hospitais, sincronizando solicitações 
 
 ## 📊 Diagrama de Arquitetura
 
-![Diagrama em camadas](Arquivo se encontra na mesma pasta que este READ.ME)
+- Arquivo se encontra na mesma pasta que este READ.ME
 
 ## ⚙️ Especificações Técnicas
 - Arduino UNO
